@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+ 
+      function drawChart() {
+        var data1 = google.visualization.arrayToDataTable([
+            ['Time', 'Temperature'],['Fri Apr 01 2016 3:00',10],['Fri Apr 01 2016 6:00',8.7],['Fri Apr 01 2016 9:00',13.8],['Fri Apr 01 2016 12:00',20.6],['Fri Apr 01 2016 15:00',24],['Fri Apr 01 2016 18:00',22.7],['Fri Apr 01 2016 21:00',17.3],['Fri Apr 01 2016 24:00',14.1],['Sat Apr 02 2016 3:00',10],['Sat Apr 02 2016 6:00',8.7],['Sat Apr 02 2016 9:00',13.8],['Sat Apr 02 2016 12:00',20.6],['Sat Apr 02 2016 15:00',24],['Sat Apr 02 2016 18:00',22.7],['Sat Apr 02 2016 21:00',17.3],['Sat Apr 02 2016 24:00',14.1]
+        ]);
+        
+        var options1 = {
+          title: 'Weather of Mapogu',
+          curveType: 'function',
+          legend: { position: 'bottom' },
+          width: 1500,
+          height: 800
+        };
+        var chart1 = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+
+        chart1.draw(data1, options1);
+
+      }
+    </script>
+  </head>
+  <body>
+      <div id="curve_chart1" style="float:left;width: 900px; height: 500px"></div>
+      <div id="curve_chart2" style="float:right;width: 900px; height: 500px"></div>
+             
+      <div id="curve_chart3" style="float:left;width: 900px; height: 500px"></div>
+      <div id="curve_chart4" style="float:right;width: 900px; height: 500px"></div>
+ 
+ 
+  </body>
+</html>
